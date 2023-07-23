@@ -1,0 +1,7 @@
+#user-panel{
+  transition-property:all;
+    /* Propiedades que quieres animar */
+  transition-duration:600ms;
+    /* Duración de la transición */
+  transition-timing-function:cubic-bezier(0.215, 0.610, 0.355, 1);
+}

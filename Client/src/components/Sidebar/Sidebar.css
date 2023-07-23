@@ -1,0 +1,17 @@
+ul::-webkit-scrollbar {
+  width: 5px;
+  /* Ancho del scrollbar */
+  background-color: transparent;
+  /* Color de fondo del scrollbar */
+}
+
+ul::-webkit-scrollbar-thumb {
+  background-color: transparent;
+  border-radius: 5px;
+  /* Color del thumb del scrollbar (invisible inicialmente) */
+}
+
+ul:hover::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.3);
+  /* Color del thumb del scrollbar al hacer hover */
+}
