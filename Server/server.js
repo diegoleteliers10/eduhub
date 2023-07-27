@@ -1,7 +1,7 @@
-const server = require('./src/app'); // Corrected import path
+const server = require("./src/app");
+const sequelize = require("./src/db");
 
-const PORT = 3001;
-
-server.listen(PORT, () => {
-  console.log("Server raised in port: " + PORT); // Corrected variable name 'server'
+server.listen(3001, async () => {
+  console.log("Server raised in port: " + 3001); 
+  await sequelize.sync({ force: false});
 });
