@@ -6,11 +6,6 @@ const Message = sequelize.define('message', {
     type: DataTypes.TEXT,
     allowNull: false,
   },
-  timestamp: {
-    type: DataTypes.DATE,
-    allowNull: false,
-    defaultValue: DataTypes.NOW,
-  },
 });
 
 module.exports = Message;

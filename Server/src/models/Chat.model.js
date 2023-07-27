@@ -1,14 +1,15 @@
-const { DataTypes } = require('sequelize');
+const { DataTypes } = require("sequelize");
 const sequelize = require("../db");
 
-const Chats = sequelize.define('chats', {
-  name: {
+const Chat = sequelize.define("chat",{
+  name:{
     type: DataTypes.STRING,
-    allowNull: true,
+    allowNull: false,
   },
-  unread_messages: {
+  unread_messages:{
     type: DataTypes.INTEGER,
-    allowNull: true,
-  },
+    defaultValue: 0,
+  }
 });
-module.exports = Chats;
+
+module.exports = Chat;

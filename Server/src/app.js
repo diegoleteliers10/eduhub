@@ -5,19 +5,25 @@ const morgan= require('morgan');
 const router = require('./routes/routes')
 //creating express server
 const server= express()
+// const User= require('../src/models/User.model')
+
+// User.create({
+//   fullname:"Diego Letelier",
+//   username:"diegolete10",
+//   email:"diegolete@gmail.com",
+//   password:"Sofi2009_",
+//   phone:"978181654",
+//   age:23,
+//   gender:"Male",
+//   university:"Del Desarrollo",
+//   year:"3rd year",
+// })
 
 //middlewares
 server.use(bodyParser.json());
 server.use(cors());
 server.use((req, res, next) => {
-  const allowedOrigins = [
-    `http://localhost:3001/`,
-  ];
-
-  const origin = req.headers.origin;
-  if(allowedOrigins.includes(origin)){
-    res.header('Access-Control-Allow-Origin', origin); // update to match the domain you will make the request from
-  }
+  res.header('Access-Control-Allow-Origin', '*');
   res.header("Access-Control-Allow-Credentials", "true")
   res.header(
     "Access-Control-Allow-Headers",
