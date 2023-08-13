@@ -6,6 +6,10 @@ const Message = sequelize.define('message', {
     type: DataTypes.TEXT,
     allowNull: false,
   },
+  reciver:{
+    type: DataTypes.STRING,
+    allowNull: false,
+  }
 });
 
 module.exports = Message;
