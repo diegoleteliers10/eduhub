@@ -42,6 +42,16 @@ const Users = sequelize.define('user', {
     type: DataTypes.STRING,
     allowNull: true,
   },
+  followers:{
+    type: DataTypes.INTEGER,
+    allowNull: true,
+    defaultValue: 0,
+  },
+  following:{
+    type: DataTypes.INTEGER,
+    allowNull: true,
+    defaultValue: 0,
+  }
 });
 
 module.exports = Users;

@@ -1,3 +1,5 @@
+//not yet
+
 const Message = require("../models/Message.model");
 const User = require("../models/User.model");
 
@@ -11,7 +13,6 @@ const createMessage = async (req,res)=>{
       reciver,
       userId: userFound.id
     })
-
     res.status(201).json(messageCreated)
   } catch (error) {
     res.status(500).json({error:error.message})

@@ -1,15 +1,14 @@
 import { Route, Routes } from 'react-router-dom'
-import Landingview from "./views/Landingview/Landingview"
-import Homeview from './views/Homeview/Homeview'
+import Landing from './views/Landing.view'
 
 const App = () => {
 
   return (
-    <div className='overflow-x-hidden'>
+    <div>
       <Routes>
-        <Route path="/" element={<Landingview />} />
-        <Route path="/home" element={<Homeview/>} />
+        <Route path='/' element={<Landing />} />
       </Routes>
+        
     </div>
   )
 }
